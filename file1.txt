@@ -1,0 +1,67 @@
+#main
+
+from gtn import guessthenumber
+from rps import rockpaperscissors
+
+while True:
+  text = '''Mini Games!
+  ~ Guess the number(1)
+  ~ Rock,Paper,Scissors(2) 
+SELECT A GAME (PRESS A NUMBER OR 'Q' TO QUIT)'''
+  string = input(text)
+  if string == "1":
+    upperbound = int(input("Enter the upper bound: "))
+    guessthenumber(upperbound)
+  elif string == "2":
+    rockpaperscissors()
+  elif string == "Q":
+    break
+
+
+#gtn
+
+import random
+
+def guessthenumber(x):
+  print("Lets start the game!")
+
+  randomnumber=random.randint(0,x)
+
+  numguess=0
+  while True:
+    guess=int(input(f"guess a number between 0 and {x}: "))
+    numguess+=1
+
+
+    if guess==randomnumber:
+      print(f"CONGRATS, THE NUMBER IS {randomnumber}")
+      break
+
+    elif guess<randomnumber:
+      print("TOO SMALL!")
+    else:
+      print("TOO HIGH!")
+
+#rps
+
+import random
+
+def guessthenumber(x):
+  print("Lets start the game!")
+
+  randomnumber=random.randint(0,x)
+
+  numguess=0
+  while True:
+    guess=int(input(f"guess a number between 0 and {x}: "))
+    numguess+=1
+
+
+    if guess==randomnumber:
+      print(f"CONGRATS, THE NUMBER IS {randomnumber}")
+      break
+
+    elif guess<randomnumber:
+      print("TOO SMALL!")
+    else:
+      print("TOO HIGH!")
