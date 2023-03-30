@@ -47,7 +47,7 @@ def guessthenumber(x):
 import random
 
 def guessthenumber(x):
-  print("Lets start the game!")
+  print("LETS START THE GAME!")
 
   randomnumber=random.randint(0,x)
 
