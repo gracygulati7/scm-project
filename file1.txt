@@ -42,7 +42,7 @@ def guessthenumber(x):
     else:
       print("TOO HIGH!")
 
-#rockps
+#rps
 
 import random
 
