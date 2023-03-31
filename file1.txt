@@ -45,23 +45,31 @@ def guessthenumber(x):
 #rps
 
 import random
+def rockpaperscissors():
+  print("LET'S START THE GAME!!")
+  r = "rock"
+  p = "paper"
+  s = "scissors"
+  choices = [r, p, s]
+  user = input(f"Select a choice either {r}, {p} or {s}: ")
+  computer = random.choice(choices)
+  if user not in choices:
+    print("Invalid Choice")
+    return
+  print(f"You chose {user} and The Computer chose {computer}")
+  if user == computer:
+    print("Tie")
+  elif user == r and computer == s:
+    print(f"You won. {r} smashes {s}")
+  elif user == p and computer == r:
+    print(f"You won. {p} covers {r}")
+  elif user == s and computer == p:
+    print(f"You won {s} cuts {p}")
+  elif computer == r and user == s:
+    print(f"The Computer won. {r} smashes {s}")
+  elif computer == p and user == r:
+    print(f"The Computer won. {p} covers {r}")
+  else:
+    print(f"The Computer won. {s} cuts {p}")
 
-def guessthenumber(x):
-  print("LETS START THE GAME!")
-
-  randomnumber=random.randint(0,x)
-
-  numguess=0
-  while True:
-    guess=int(input(f"guess a number between 0 and {x}: "))
-    numguess+=1
-
-
-    if guess==randomnumber:
-      print(f"CONGRATS, THE NUMBER IS {randomnumber}")
-      break
-
-    elif guess<randomnumber:
-      print("TOO SMALL!")
-    else:
-      print("TOO HIGh!")
+      
